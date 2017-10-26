@@ -8,11 +8,9 @@ language: python
 python:
   - "2.7"
 
-before_build:
-  - cc-test-reporter before-build
-
 before_install:
-  - pip install codecov
+  - pip install pytest pytest-cov
+  - pip install coveralls
 
 install:
   - pip install -r requirements.txt
@@ -22,7 +20,6 @@ script:
   - nosetests --with-coverage
 
 after_success:
+  - coveralls
   - codecov --file coverage/lcov.info --disable search
 
-after-build:
-  - cc-test-reporter after-build --exit-code $?
