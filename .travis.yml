@@ -15,11 +15,12 @@ install:
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
-  - cc-test-reporter before-build
+  - ./cc-test-reporter before-build
 
 # run scripts
 script:
   - nosetests --with-coverage --cover-package=MayaPrototypeTool
+  - bundle exec rspec
 
 after_script:
-  - cc-test-reporter after-build --exit-code $?
+  - ./cc-test-reporter after-build --exit-code $?
