@@ -13,7 +13,8 @@ install:
 
 # run scripts
 script:
-  - nosetests --with-coverage --cover-package=MayaPrototypeTool
+ - bundle exec rspec
+#  - nosetests --with-coverage --cover-package=MayaPrototypeTool
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $?
