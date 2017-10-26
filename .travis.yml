@@ -10,4 +10,4 @@ install:
 
 # run scripts
 script:
-  - nosetests --with-coverage --cover-erase --cover-html --cover-package=MayaPrototypeTool
+  - nosetests --with-coverage --cover-package=MayaPrototypeTool
