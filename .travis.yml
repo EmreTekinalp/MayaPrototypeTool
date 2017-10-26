@@ -1,3 +1,7 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=02010105b384d3a41a50c3f9130f0ce3aa35d7d5ef3258519015cc94afe417a3
+
 language: python
 
 # python versions to consider
@@ -8,6 +12,14 @@ python:
 install:
   pip install -r requirements.txt
 
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 # run scripts
 script:
   - nosetests --with-coverage --cover-package=MayaPrototypeTool
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
