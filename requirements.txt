@@ -2,3 +2,5 @@ flask
 flask_sqlalchemy
 blinker
 nose
+coverage
+codeclimate-test-reporter
