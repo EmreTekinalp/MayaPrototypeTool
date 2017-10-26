@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/EmreTekinalp/MayaPrototypeTool.svg?branch=master)](https://travis-ci.org/EmreTekinalp/MayaPrototypeTool)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/478fc671accdf4a37c88/test_coverage)](https://codeclimate.com/github/EmreTekinalp/MayaPrototypeTool/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/478fc671accdf4a37c88/test_coverage)](https://codeclimate.com/github/EmreTekinalp/MayaPrototypeTool/test)
 
 # MPT - MayaPrototypeTool
 Generate Python Code of manually prototyped node network setups in Maya.
