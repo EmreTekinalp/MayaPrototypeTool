@@ -6,4 +6,8 @@ var = 5
 for i in range(var):
     print i
 
+
+
+
+
 test_this_func()
