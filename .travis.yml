@@ -18,7 +18,11 @@ install:
 # run scripts
 script:
   - nosetests --with-coverage
-  - bash setup.sh
+
+after_script:
+  - coverage run test.py
+  - coverage xml
+  - python-codacy-coverage --r coverage.xml
 
 after_success:
   - coveralls
