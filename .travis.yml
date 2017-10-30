@@ -18,11 +18,8 @@ install:
 # run scripts
 script:
   - nosetests --with-coverage
+  - bash setup.sh
 
 after_success:
   - coveralls
   - codecov --file coverage/lcov.info --disable search
-  - coverage run test.py
-  - coverage xml
-  - python-codacy-coverage --r coverage.xml
-
