@@ -18,6 +18,7 @@ install:
 # run scripts
 script:
   - nosetests --with-coverage
+  - cd /Users/emretekinalp/PycharmProjects/MayaPrototypeTool
   - ./setup.sh
 
 after_script:
