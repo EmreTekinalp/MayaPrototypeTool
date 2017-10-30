@@ -13,6 +13,11 @@ before_install:
 
 install:
   - pip install -r requirements.txt
+  - coverage run test.py
+  - coverage xml
+  - python-codacy-coverage --r coverage.xml
+#  - python-codacy-coverage -c MayaPrototypeTool -d /Users/emretekinalp/PycharmProjects/MayaPrototypeTool -r coverage.xml
+
 
 # run scripts
 script:
