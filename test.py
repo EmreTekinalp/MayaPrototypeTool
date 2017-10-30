@@ -8,7 +8,7 @@ for i in range(var):
 
 
 def not_call():
-    print 'this code will not be called'
+    he = 'this code will not be called'
     return 'whuat?'
 
 
@@ -16,6 +16,9 @@ def not_call():
 
 def OUCHhah():
     a = 'bad naming here...jeeez'
+    b = 'aaaaa'
+    c= 121221
+    de='adad' + 'adasddsds'
     return 124
 
 

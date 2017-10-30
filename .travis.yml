@@ -10,22 +10,16 @@ python:
 
 before_install:
   - pip install pytest pytest-cov
-  - pip install coveralls
 
 install:
   - pip install -r requirements.txt
 
 # run scripts
 script:
-  - nosetests --with-coverage
+  - nosetests
 
 after_script:
   - coverage run test.py
   - coverage xml
-  - python-codacy-coverage --r coverage.xml
-  - cd /Users/emretekinalp/PycharmProjects/MayaPrototypeTool
-  - ./setup.sh
-
-after_success:
-  - coveralls
-  - codecov --file coverage/lcov.info --disable search
+#  - python-codacy-coverage --r coverage.xml
+  - python-codacy-coverage -c MayaPrototypeTool -d /Users/emretekinalp/PycharmProjects/MayaPrototypeTool -r coverage.xml
