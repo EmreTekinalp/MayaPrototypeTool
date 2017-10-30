@@ -20,9 +20,9 @@ script:
   - nosetests --with-coverage
   - coverage run test.py
   - coverage xml
-  - python-codacy-coverage --r coverage.xml
 
 after_success:
   - coveralls
-  - codecov --file coverage/lcov.info --disable search
+#  - codecov --file coverage/lcov.info --disable search
+  - python-codacy-coverage --r coverage.xml
 
