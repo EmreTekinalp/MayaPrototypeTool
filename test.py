@@ -7,7 +7,9 @@ for i in range(var):
     print i
 
 
-
+def not_call():
+    print 'this code will not be called'
+    return 'whuat?'
 
 
 test_this_func()
