@@ -20,9 +20,11 @@ before_script:
 # run scripts
 script:
   - nosetests
-
-after_success:
   - echo $TRAVIS_BUILD_DIR
   - coverage run test.py
   - coverage xml test.py
   - python-codacy-coverage --r coverage.xml
+
+
+after_success:
+  - echo "it is succeeding"
