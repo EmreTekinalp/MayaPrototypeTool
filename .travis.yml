@@ -18,7 +18,11 @@ install:
 script:
   - nosetests --with-coverage
 
+after_failure:
+  - echo "running failure"
+
 after_success:
-  - bash <(coverage run test.py)
-  - bash <(coverage xml)
-  - bash <(python-codacy-coverage --r coverage.xml)
+  - echo "it is running after success here"
+  - coverage run test.py
+  - coverage xml
+  - python-codacy-coverage --r coverage.xml
