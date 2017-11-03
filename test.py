@@ -22,10 +22,15 @@ def OUCHhah():
     f =2222
     worse=121312243
     itsnotgettingBETTER=153423
+    oh=123123554545
+    h=4545
+    t=65665
+    c=6565656
     return 124
 
 
 
+test_this_func()
 
 
 
@@ -37,3 +42,5 @@ print 'whaaat?'
 
 
 print('yep babublaba')
+test_this_func()
+test_this_func()
