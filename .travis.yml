@@ -19,10 +19,12 @@ script:
   - nosetests
   - coverage run test.py
   - coverage xml
+  - echo $TRAVIS_PULL_REQUEST
+  - echo "it is running after success here"
 
 after_failure:
   - echo "running failure"
 
 after_success:
-  - echo "it is running after success here"
+  - echo $TRAVIS_PULL_REQUEST
   - python-codacy-coverage --r coverage.xml
