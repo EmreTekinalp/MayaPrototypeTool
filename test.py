@@ -29,11 +29,6 @@ def OUCHhah():
     return 124
 
 
-
-test_this_func()
-
-
-
 test_this_func()
 
 
