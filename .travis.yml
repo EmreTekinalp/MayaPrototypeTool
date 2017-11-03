@@ -17,6 +17,7 @@ install:
 # run scripts
 script:
   - nosetests
+  - echo $TRAVIS_BUILD_DIR
   - pwd
   - coverage run test.py
   - coverage xml test.py
