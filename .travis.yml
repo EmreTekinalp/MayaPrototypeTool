@@ -18,9 +18,7 @@ install:
 script:
   - nosetests
   - coverage run test.py
-  - coverage xml
-  - echo $TRAVIS_PULL_REQUEST
-  - echo "it is running after success here"
+  - coverage xml test.py
 
 after_failure:
   - echo "running failure"
