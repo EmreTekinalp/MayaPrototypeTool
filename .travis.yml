@@ -14,17 +14,15 @@ before_install:
 install:
   - pip install -r requirements.txt
 
+before_script:
+  - mkdir -p $TRAVIS_BUILD_DIR
+
 # run scripts
 script:
   - nosetests
-  - MY_PATH="`dirname \"$0\"`"
-  - echo "$MY_PATH"
-  - coverage run test.py
-  - coverage xml test.py
-
-after_failure:
-  - echo "running failure"
 
 after_success:
-  - echo $TRAVIS_PULL_REQUEST
+  - echo $TRAVIS_BUILD_DIR
+  - coverage run test.py
+  - coverage xml test.py
   - python-codacy-coverage --r coverage.xml
