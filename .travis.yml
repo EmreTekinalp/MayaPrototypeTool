@@ -23,6 +23,5 @@ script:
   - coverage xml test.py
   - python-codacy-coverage --r coverage.xml
 
-
 after_success:
   - echo "it is succeeding"
