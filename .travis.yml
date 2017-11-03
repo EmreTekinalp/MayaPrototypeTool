@@ -16,13 +16,13 @@ install:
 
 # run scripts
 script:
-  - nosetests --with-coverage
+  - nosetests
+  - coverage run test.py
+  - coverage xml
 
 after_failure:
   - echo "running failure"
 
 after_success:
   - echo "it is running after success here"
-  - coverage run test.py
-  - coverage xml
   - python-codacy-coverage --r coverage.xml
