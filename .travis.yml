@@ -17,6 +17,7 @@ install:
 # run scripts
 script:
   - nosetests
+  - pwd
   - coverage run test.py
   - coverage xml test.py
 
