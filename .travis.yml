@@ -10,7 +10,7 @@ python:
 
 before_install:
   - pip install pytest pytest-cov
-  - cd /Users/emretekinalp/PycharmProjects/MayaPrototypeTool
+  - cd "/Users/emretekinalp/PycharmProjects/MayaPrototypeTool"
 
 install:
   - pip install -r requirements.txt
