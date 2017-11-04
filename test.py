@@ -1,14 +1,6 @@
-def test_this_func():
-    print('This is running and expecting a raise Exception')
+def test_this_func(mult):
     a = 1
     b = 1
-    if (a + b) > 2:
-        raise Exception('haha this fails')
+    return (a + b) * mult
 
-var = 5
-for i in range(var):
-    print(i)
-
-print('whaaat?')
-
-test_this_func()
+print('The result is {0}'.format(test_this_func(20)))
