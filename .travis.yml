@@ -17,11 +17,17 @@ install:
   - pip install codecov
   - pip install -r requirements.txt
 
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
 # run scripts
 script:
+  - bundle exec rspec
 #  - nosetests --with-coverage
-  - coverage run test/test.py
-  - coverage xml test/test.py
+#  - coverage run test/test.py
+#  - coverage xml test/test.py
 #  - coverage run --omit = test/test.py
 #  - coverage xml --omit = test/test.py
 #  - coverage run --omit = test/test.py
@@ -29,8 +35,12 @@ script:
 #  - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
 #  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+
 after_success:
-  - codecov
+#  - codecov
 #  - coveralls
 #  - codecov --token=07c38245-7006-4125-816e-554cf5aa71f6
 #  - codecov --file coverage/lcov.info --disable search

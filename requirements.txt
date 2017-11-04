@@ -1,6 +1,4 @@
-flask
-flask_sqlalchemy
-blinker
-nose
+mock
 coverage
 codacy-coverage
+codeclimate-test-reporter
