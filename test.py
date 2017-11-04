@@ -7,4 +7,17 @@ def test_this_func(mult):
         raise Exception('Wrong')
     return (a + b) * mult
 
+
 print('The result is {0}'.format(test_this_func(20)))
+
+
+def hahah():
+    arg = 223
+    b= 223232
+    c =11
+
+
+
+
+
+print (123e204040)
