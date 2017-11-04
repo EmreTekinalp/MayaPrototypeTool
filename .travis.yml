@@ -1,6 +1,7 @@
 env:
   global:
     - CC_TEST_REPORTER_ID=02010105b384d3a41a50c3f9130f0ce3aa35d7d5ef3258519015cc94afe417a3
+    - CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
 
 language: python
 
@@ -14,9 +15,6 @@ before_install:
 
 install:
   - pip install -r requirements.txt
-
-r_github_packages:
-  /Users/emretekinalp/PycharmProjects/MayaPrototypeTool
 
 before_script:
   - pwd
