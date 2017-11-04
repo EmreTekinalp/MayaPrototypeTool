@@ -14,17 +14,18 @@ before_install:
 #  - pip install coveralls
 
 install:
-  - pip install codecov
+#  - pip install codecov
   - pip install -r requirements.txt
 
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
+#  - chmod +x ./cc-test-reporter
+#  - ./cc-test-reporter before-build
 
 # run scripts
 script:
-  - bundle exec rspec
+  - nosetests --with-coverage --cover-erase --cover-package=MayaPrototypeTool
+#  - bundle exec rspec
 #  - nosetests --with-coverage
 #  - coverage run test/test.py
 #  - coverage xml test/test.py
@@ -36,7 +37,8 @@ script:
 #  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - codeclimate-test-reporter
+#  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 
 after_success:
