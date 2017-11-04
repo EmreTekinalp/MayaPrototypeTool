@@ -9,7 +9,6 @@ python:
   - "2.7"
 
 before_install:
-  - pip install pytest pytest-cov
   - pip install codacy-coverage
 
 install:
@@ -17,7 +16,6 @@ install:
 
 # run scripts
 script:
-  - nosetests
   - echo $TRAVIS_BUILD_DIR
   - coverage run test.py
   - coverage xml test.py
