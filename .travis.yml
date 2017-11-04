@@ -17,7 +17,7 @@ install:
 
 # run scripts
 script:
-  - nosetests
+  - nosetests --with-coverage
   - coverage run --omit = src/mayaprototypetool.py test/test.py
   - coverage xml --omit = src/mayaprototypetool.py test/test.py
   - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
