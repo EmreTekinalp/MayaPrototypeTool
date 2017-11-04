@@ -20,9 +20,9 @@ install:
 # run scripts
 script:
 #  - nosetests --with-coverage
-  - coverage run test/test.py
-#  - coverage run --omit = src/mayaprototypetool.py test/test.py
-#  - coverage xml --omit = src/mayaprototypetool.py test/test.py
+#  - coverage run test/test.py
+  - coverage run --omit = test/test.py
+  - coverage xml --omit = test/test.py
 #  - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
 #  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
