@@ -11,9 +11,6 @@ python:
 before_install:
   - pip install codacy-coverage
 
-install:
-#  - pip install -r requirements.txt
-
 # run scripts
 script:
   - coverage run test.py
