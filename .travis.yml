@@ -18,3 +18,4 @@ script:
   - coverage xml --omit = src/* test/* *.py
   - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
   - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
+
