@@ -15,8 +15,8 @@ install:
   - pip install -r requirements.txt
 
 before_script:
-  - cd /Users/emretekinalp/PycharmProjects/MayaPrototypeTool
   - pwd
+  - cd /Users/emretekinalp/PycharmProjects/MayaPrototypeTool
 
 # run scripts
 script:
