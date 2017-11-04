@@ -7,16 +7,8 @@ def test_this_func():
 
 var = 5
 for i in range(var):
-    print i
+    print(i)
 
-def not_call():
-    return 'whuat?'
-
-def OUCHhah():
-    a = 'bad naming here...jeeez'
-    b = 'aaaaa'
-    return 124
-
-print 'whaaat?'
+print('whaaat?')
 
 test_this_func()
