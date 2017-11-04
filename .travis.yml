@@ -10,6 +10,7 @@ python:
 
 before_install:
   - pip install pytest pytest-cov
+  - cd /Users/emretekinalp/PycharmProjects/MayaPrototypeTool
 
 install:
   - pip install -r requirements.txt
@@ -17,7 +18,6 @@ install:
 # run scripts
 script:
   - nosetests
-  - mkdir -p $TRAVIS_BUILD_DIR
   - echo $TRAVIS_BUILD_DIR
   - coverage run test.py
   - coverage xml test.py
