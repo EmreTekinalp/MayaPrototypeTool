@@ -9,11 +9,11 @@ python:
   - "2.7"
 
 install:
-  - pip install coverage
-  - pip install codacy-coverage
+  - pip install -r requirements.txt
 
 # run scripts
 script:
+  - nosetests --with-coverage
   - coverage run --omit = src/mayaprototypetool.py test/test.py
   - coverage xml --omit = src/mayaprototypetool.py test/test.py
   - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
