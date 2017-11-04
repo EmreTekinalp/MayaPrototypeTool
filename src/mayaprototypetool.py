@@ -1,4 +1,4 @@
 def run_this():
-    print 'running'
+    print('running')
 
 run_this()
