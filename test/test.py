@@ -1,3 +1,8 @@
+from src import mayaprototypetool
+
+mayaprototypetool.run_this()
+
+
 def test_this_func(mult):
     a = 1
     b = 1
