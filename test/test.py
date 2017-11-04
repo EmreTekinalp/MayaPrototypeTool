@@ -1,6 +1,8 @@
 def this_func(mult):
     a = 1
     b = 1
+    c = 12
+    d = 54
     return (a + b) * mult
 
 
