@@ -10,21 +10,22 @@ python:
   - "2.7"
 
 before_install:
-  - pip install codecov
 #  - pip install pytest pytest-cov
 #  - pip install coveralls
 
 install:
+  - pip install codecov
   - pip install -r requirements.txt
 
 # run scripts
 script:
 #  - nosetests --with-coverage
-#  - coverage run test/test.py
+  - coverage run test/test.py
+  - coverage xml test/test.py
 #  - coverage run --omit = test/test.py
 #  - coverage xml --omit = test/test.py
-  - coverage run --omit = test/* *.py
-  - coverage xml --omit = test/* *.py
+#  - coverage run --omit = test/test.py
+#  - coverage xml --omit = test/test.py
 #  - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
 #  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
