@@ -13,7 +13,7 @@ install:
 
 # run scripts
 script:
-  - nosetests --with-coverage
+  - nosetests
   - coverage run --omit = src/* test/* *.py
   - coverage xml --omit = src/* test/* *.py
   - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
