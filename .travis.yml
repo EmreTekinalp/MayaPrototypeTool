@@ -8,6 +8,10 @@ language: python
 python:
   - "2.7"
 
+before_install:
+  - pip install pytest pytest-cov
+  - pip install coveralls
+
 install:
   - pip install -r requirements.txt
 
@@ -19,3 +23,6 @@ script:
   - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
   - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
+after_success:
+  - coveralls
+  - codecov --file coverage/lcov.info --disable search
