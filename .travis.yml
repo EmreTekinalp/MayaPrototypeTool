@@ -10,6 +10,7 @@ python:
 
 before_install:
   - pip install pytest pytest-cov
+  - pip install codacy-coverage
 
 install:
   - pip install -r requirements.txt
