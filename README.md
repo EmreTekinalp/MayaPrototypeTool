@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f37c3276cea44ebafe516c2f6b06688)](https://www.codacy.com/app/EmreTekinalp/MayaPrototypeTool?utm_source=github.com&utm_medium=referral&utm_content=EmreTekinalp/MayaPrototypeTool&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/EmreTekinalp/MayaPrototypeTool.svg?branch=master)](https://travis-ci.org/EmreTekinalp/MayaPrototypeTool)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f37c3276cea44ebafe516c2f6b06688)](https://www.codacy.com/app/EmreTekinalp/MayaPrototypeTool?utm_source=github.com&utm_medium=referral&utm_content=EmreTekinalp/MayaPrototypeTool&utm_campaign=badger)
 [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/5f37c3276cea44ebafe516c2f6b06688)](https://www.codacy.com/app/EmreTekinalp/MayaPrototypeTool?utm_source=github.com&utm_medium=referral&utm_content=EmreTekinalp/MayaPrototypeTool&utm_campaign=Badge_Coverage)
