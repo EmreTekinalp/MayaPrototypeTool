@@ -12,11 +12,10 @@ before_install:
   - pip install codacy-coverage
 
 install:
-  - pip install -r requirements.txt
+#  - pip install -r requirements.txt
 
 # run scripts
 script:
-  - echo $TRAVIS_BUILD_DIR
   - coverage run test.py
   - coverage xml test.py
   - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
