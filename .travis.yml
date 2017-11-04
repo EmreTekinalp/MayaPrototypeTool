@@ -9,6 +9,7 @@ python:
   - "2.7"
 
 before_install:
+  - pip install codecov
   - pip install pytest pytest-cov
   - pip install coveralls
 
@@ -24,5 +25,7 @@ script:
   - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
 after_success:
+  - codecov
   - coveralls
+  - codecov --token=07c38245-7006-4125-816e-554cf5aa71f6
   - codecov --file coverage/lcov.info --disable search
