@@ -9,6 +9,7 @@ python:
   - "2.7"
 
 before_install:
+  - pip install coverage
   - pip install codacy-coverage
 
 # run scripts
