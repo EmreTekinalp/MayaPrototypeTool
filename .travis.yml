@@ -25,16 +25,12 @@ before_script:
 
 # run scripts
 script:
-#  - nosetests --with-coverage --cover-erase --cover-xml
-#  - coverage run test/test.py
-#  - coverage xml test/test.py
   - coverage erase
-  - coverage run --source = src/* test/*
-  - coverage xml --source = src/* test/*
+  - coverage run -a app/mayaprototypetool.py
+  - coverage run -a test/test.py
   - coverage report -m
+  - coverage xml
   - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
-#  - bundle exec rspec
-#  - nosetests --with-coverage
 #  - coverage run --omit = test/test.py
 #  - coverage xml --omit = test/test.py
 #  - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57

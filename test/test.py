@@ -3,6 +3,8 @@
 def this_func(mult=0):
     a = 1
     b = 1
+    if (a - b) == 2:
+        raise Exception('No way')
     return (a + b) * mult
 
 
