@@ -1,3 +1,4 @@
+from app import mayaprototypetool
 
 
 def this_func(mult=0):
@@ -8,4 +9,11 @@ def this_func(mult=0):
     return (a + b) * mult
 
 
-print('The result is {0} and'.format(this_func(20)))
+def haha():
+    a = 1
+    n = 3
+    c = 5
+    print(a, n)
+
+
+print('The result is {0} and {1}'.format(this_func(20), mayaprototypetool.run_this()))

@@ -6,22 +6,11 @@ env:
 
 language: python
 
-# python versions to consider
 python:
   - "2.7"
 
-before_install:
-#  - pip install pytest pytest-cov
-#  - pip install coveralls
-
 install:
-#  - pip install codecov
   - pip install -r requirements.txt
-
-before_script:
-#  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
-#  - chmod +x ./cc-test-reporter
-#  - ./cc-test-reporter before-build
 
 # run scripts
 script:
@@ -31,18 +20,3 @@ script:
   - coverage report -m
   - coverage xml
   - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
-#  - coverage run --omit = test/test.py
-#  - coverage xml --omit = test/test.py
-#  - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
-#  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
-
-after_script:
-#  - codeclimate-test-reporter
-#  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-
-
-after_success:
-#  - codecov
-#  - coveralls
-#  - codecov --token=07c38245-7006-4125-816e-554cf5aa71f6
-#  - codecov --file coverage/lcov.info --disable search
