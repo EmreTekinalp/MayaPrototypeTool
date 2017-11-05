@@ -26,7 +26,7 @@ before_script:
 # run scripts
 script:
   - echo $TRAVIS_BUILD_DIR/coverage.xml
-  - nosetests --with-coverage --cover-erase --cover-package=MayaPrototypeTool --cover-xml --cover-xml-file=$TRAVIS_BUILD_DIR/coverage.xml
+  - nosetests --with-coverage --cover-erase --cover-package=MayaPrototypeTool --cover-package=MayaPrototypeTool/src --cover-tests --cover-xml --cover-xml-file=$TRAVIS_BUILD_DIR/coverage.xml
 #  - bundle exec rspec
 #  - nosetests --with-coverage
 #  - coverage run test/test.py
