@@ -2,6 +2,7 @@ env:
   global:
     - CC_TEST_REPORTER_ID=02010105b384d3a41a50c3f9130f0ce3aa35d7d5ef3258519015cc94afe417a3
     - CODECOV_TOKEN=07c38245-7006-4125-816e-554cf5aa71f6
+    - export CODACY_PROJECT_TOKEN=2e6a4e36e7aa4c96acbef9ac7c66fe57
 
 language: python
 
@@ -24,11 +25,11 @@ before_script:
 
 # run scripts
 script:
-#  - nosetests --with-coverage --cover-erase --cover-package=MayaPrototypeTool
+  - nosetests --with-coverage --cover-erase --cover-package=MayaPrototypeTool --cover-xml-file=coverage.xml
 #  - bundle exec rspec
 #  - nosetests --with-coverage
-  - coverage run test/test.py
-  - coverage xml test/test.py
+#  - coverage run test/test.py
+#  - coverage xml test/test.py
 #  - coverage run --omit = test/test.py
 #  - coverage xml --omit = test/test.py
 #  - coverage run --omit = test/test.py
@@ -37,7 +38,8 @@ script:
 #  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
 after_script:
-  - codeclimate-test-reporter
+  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
+#  - codeclimate-test-reporter
 #  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 
