@@ -25,7 +25,7 @@ before_script:
 
 # run scripts
 script:
-  - nosetests --with-coverage --cover-erase --cover-package=MayaPrototypeTool --cover-tests --cover-xml
+  - nosetests --with-coverage --cover-erase --cover-xml
   - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 #  - bundle exec rspec
 #  - nosetests --with-coverage
