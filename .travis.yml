@@ -26,6 +26,7 @@ before_script:
 # run scripts
 script:
   - nosetests --with-coverage --cover-erase --cover-package=MayaPrototypeTool --cover-tests --cover-xml
+  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 #  - bundle exec rspec
 #  - nosetests --with-coverage
 #  - coverage run test/test.py
@@ -38,7 +39,6 @@ script:
 #  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 
 after_script:
-  - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 #  - codeclimate-test-reporter
 #  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
