@@ -28,8 +28,10 @@ script:
 #  - nosetests --with-coverage --cover-erase --cover-xml
 #  - coverage run test/test.py
 #  - coverage xml test/test.py
-  - coverage run --omit = src/* test/*
-  - coverage xml --omit = src/* test/*
+  - coverage erase
+  - coverage run --source = src/* test/*
+  - coverage xml --source = src/* test/*
+  - coverage report -m
   - python-codacy-coverage -c $TRAVIS_COMMIT -d $TRAVIS_BUILD_DIR -r coverage.xml
 #  - bundle exec rspec
 #  - nosetests --with-coverage
